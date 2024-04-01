@@ -18,6 +18,7 @@
 		4F4BA79E2BB6412B00CB32A2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4BA79D2BB6412B00CB32A2 /* RxCocoa */; };
 		4F4BA7A02BB6412B00CB32A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4BA79F2BB6412B00CB32A2 /* RxSwift */; };
 		4F4BA7A32BB6414E00CB32A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4BA7A22BB6414E00CB32A2 /* SnapKit */; };
+		4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4F4BA7922BB63F6600CB32A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4BA7982BB6404400CB32A2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewController.swift; sourceTree = "<group>"; };
+		4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				4F4BA7922BB63F6600CB32A2 /* Info.plist */,
 				4F4BA7982BB6404400CB32A2 /* BaseViewController.swift */,
 				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
+				4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */,
 			);
 			path = RxExample;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				4F4BA7892BB63F6400CB32A2 /* ViewController.swift in Sources */,
 				4F4BA7992BB6404400CB32A2 /* BaseViewController.swift in Sources */,
+				4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */,
 				4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */,
 				4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */,
 				4F4BA79B2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift in Sources */,

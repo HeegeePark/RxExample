@@ -62,7 +62,6 @@ final class SimpleTableViewExampleViewController: BaseViewController {
     }
     
     override func configureView() {
-        view.backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 }
