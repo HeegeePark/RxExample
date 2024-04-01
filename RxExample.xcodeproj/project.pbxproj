@@ -19,6 +19,8 @@
 		4F4BA7A02BB6412B00CB32A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4BA79F2BB6412B00CB32A2 /* RxSwift */; };
 		4F4BA7A32BB6414E00CB32A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4BA7A22BB6414E00CB32A2 /* SnapKit */; };
 		4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */; };
+		4F4BA7B72BBB25CD00CB32A2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */; };
+		4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		4F4BA7982BB6404400CB32A2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewController.swift; sourceTree = "<group>"; };
 		4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewExampleViewController.swift; sourceTree = "<group>"; };
+		4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		4F4BA7832BB63F6400CB32A2 /* RxExample */ = {
 			isa = PBXGroup;
 			children = (
+				4F4BA7BA2BBB2A0900CB32A2 /* Assignment */,
 				4F4BA7842BB63F6400CB32A2 /* AppDelegate.swift */,
 				4F4BA7862BB63F6400CB32A2 /* SceneDelegate.swift */,
 				4F4BA7882BB63F6400CB32A2 /* ViewController.swift */,
@@ -76,10 +81,19 @@
 				4F4BA78F2BB63F6600CB32A2 /* LaunchScreen.storyboard */,
 				4F4BA7922BB63F6600CB32A2 /* Info.plist */,
 				4F4BA7982BB6404400CB32A2 /* BaseViewController.swift */,
+				4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */,
+				4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */,
+			);
+			path = RxExample;
+			sourceTree = "<group>";
+		};
+		4F4BA7BA2BBB2A0900CB32A2 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
 				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
 				4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */,
 			);
-			path = RxExample;
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +180,10 @@
 				4F4BA7992BB6404400CB32A2 /* BaseViewController.swift in Sources */,
 				4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */,
 				4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */,
+				4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */,
 				4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */,
 				4F4BA79B2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift in Sources */,
+				4F4BA7B72BBB25CD00CB32A2 /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
