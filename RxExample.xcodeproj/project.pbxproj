@@ -22,6 +22,7 @@
 		4F4BA7B72BBB25CD00CB32A2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */; };
 		4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */; };
 		4F4BA7BC2BBB2A5200CB32A2 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */; };
+		4F4BA7BE2BBB331300CB32A2 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
 				4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */,
 				4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */,
+				4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */,
 				4F4BA79B2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift in Sources */,
 				4F4BA7B72BBB25CD00CB32A2 /* Reusable.swift in Sources */,
+				4F4BA7BE2BBB331300CB32A2 /* SimpleValidationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
