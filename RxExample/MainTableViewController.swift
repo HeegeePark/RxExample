@@ -9,7 +9,8 @@ import UIKit
 
 final class MainTableViewController: UITableViewController {
     private let viewControllers = [SimpleTableViewExampleViewController.self,
-                                   SimplePickerViewExampleViewController.self]
+                                   SimplePickerViewExampleViewController.self,
+                                   NumbersViewController.self]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,6 +21,7 @@
 		4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */; };
 		4F4BA7B72BBB25CD00CB32A2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */; };
 		4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */; };
+		4F4BA7BC2BBB2A5200CB32A2 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewExampleViewController.swift; sourceTree = "<group>"; };
 		4F4BA7B62BBB25CD00CB32A2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4F4BA7B82BBB260900CB32A2 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
 				4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */,
+				4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4BA7BC2BBB2A5200CB32A2 /* NumbersViewController.swift in Sources */,
 				4F4BA7892BB63F6400CB32A2 /* ViewController.swift in Sources */,
 				4F4BA7992BB6404400CB32A2 /* BaseViewController.swift in Sources */,
 				4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */,
