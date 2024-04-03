@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F07B81F2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F07B81E2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift */; };
 		4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7842BB63F6400CB32A2 /* AppDelegate.swift */; };
 		4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7862BB63F6400CB32A2 /* SceneDelegate.swift */; };
 		4F4BA7892BB63F6400CB32A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7882BB63F6400CB32A2 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F07B81E2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewModel.swift; sourceTree = "<group>"; };
 		4F4BA7812BB63F6400CB32A2 /* RxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4BA7842BB63F6400CB32A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F4BA7862BB63F6400CB32A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F07B81D2BBE170B00E1DB2E /* SimpleTableViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
+				4F07B81E2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift */,
+			);
+			path = SimpleTableViewExample;
+			sourceTree = "<group>";
+		};
 		4F4BA7782BB63F6400CB32A2 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +105,7 @@
 		4F4BA7BA2BBB2A0900CB32A2 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				4F4BA79A2BB6407300CB32A2 /* SimpleTableViewExampleViewController.swift */,
+				4F07B81D2BBE170B00E1DB2E /* SimpleTableViewExample */,
 				4F4BA7B42BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift */,
 				4F4BA7BB2BBB2A5200CB32A2 /* NumbersViewController.swift */,
 				4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */,
@@ -186,6 +197,7 @@
 				4F4BA7892BB63F6400CB32A2 /* ViewController.swift in Sources */,
 				4F4BA7992BB6404400CB32A2 /* BaseViewController.swift in Sources */,
 				4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */,
+				4F07B81F2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift in Sources */,
 				4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */,
 				4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */,
 				4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */,

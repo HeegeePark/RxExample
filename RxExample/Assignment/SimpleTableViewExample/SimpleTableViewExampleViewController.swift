@@ -12,6 +12,7 @@ import SnapKit
 
 final class SimpleTableViewExampleViewController: BaseViewController {
     private let tableView = UITableView()
+    private let viewModel = SimpleTableViewExampleViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,34 +20,24 @@ final class SimpleTableViewExampleViewController: BaseViewController {
     }
     
     func bind() {
-        let items = Observable.just(
-            (0..<20).map { String($0) }
-        )
-        
-        items
+        viewModel.items
             .bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)) { (row, element, cell) in
                 cell.textLabel?.text = "\(element) @ row \(row)"
                 cell.accessoryType = .detailButton
             }
             .disposed(by: disposeBag)
         
-        tableView.rx
-            .modelSelected(String.self)
-            .bind(with: self) { owner, value in
-                owner.showAlert(title: "RxExample",
-                                message: "Tapped \(value)",
-                                ok: "OK",
-                                handler: { })
-            }
+        tableView.rx.modelSelected(String.self)
+            .bind(to: viewModel.itemSelected)
             .disposed(by: disposeBag)
         
-        tableView.rx
-            .itemAccessoryButtonTapped
-            .bind(with: self) { owner, indexPath in
-                owner.showAlert(title: "RxExample",
-                                message: "Tapped Detail @ \(indexPath.section),\(indexPath.row)",
-                                ok: "OK",
-                                handler: { })
+        tableView.rx.itemAccessoryButtonTapped
+            .bind(to: viewModel.itemAccessoryButtonTapped)
+            .disposed(by: disposeBag)
+        
+        viewModel.showAlert
+            .bind { [weak self] alert in
+                self?.showAlert(title: alert.title, message: alert.message, ok: alert.ok, handler: alert.handler)
             }
             .disposed(by: disposeBag)
     }
