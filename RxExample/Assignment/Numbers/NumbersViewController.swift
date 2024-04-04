@@ -11,43 +11,36 @@ import RxCocoa
 import SnapKit
 
 final class NumbersViewController: BaseViewController {
-    
     private let number1 = UITextField()
     private let number2 = UITextField()
     private let number3 = UITextField()
-    
-    private let plus = {
-        let view = UILabel()
-        view.text = "+"
-        view.textColor = .label
-        view.font = .systemFont(ofSize: 20)
-        view.sizeToFit()
-        return view
-    }()
-    
-    private let lineView = {
-        let view = UIView()
-        view.backgroundColor = .label
-        return view
-    }()
-    
+    private let plus = UILabel()
+    private let lineView = UIView()
     private let resultLabel = UILabel()
-
+    
+    private let viewModel = NumbersViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
     }
     
     func bind() {
-        Observable.combineLatest(number1.rx.text.orEmpty,
-                                 number2.rx.text.orEmpty,
-                                 number3.rx.text.orEmpty)
-        { value1, value2, value3 -> Int in
-            return (Int(value1) ?? 0) + (Int(value2) ?? 0) + (Int(value3) ?? 0)
-        }
-        .map(\.description)
-        .bind(to: resultLabel.rx.text)
-        .disposed(by: disposeBag)
+        viewModel.resultText
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        number1.rx.text.orEmpty
+            .bind(to: viewModel.number1Text)
+            .disposed(by: disposeBag)
+        
+        number2.rx.text.orEmpty
+            .bind(to: viewModel.number2Text)
+            .disposed(by: disposeBag)
+        
+        number3.rx.text.orEmpty
+            .bind(to: viewModel.number3Text)
+            .disposed(by: disposeBag)
     }
     
     override func configureHierarchy() {
@@ -108,5 +101,4 @@ final class NumbersViewController: BaseViewController {
         resultLabel.font = .systemFont(ofSize: 17, weight: .bold)
         resultLabel.textAlignment = .right
     }
-
 }
