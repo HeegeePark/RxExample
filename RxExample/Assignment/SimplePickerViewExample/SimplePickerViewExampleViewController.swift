@@ -16,25 +16,26 @@ final class SimplePickerViewExampleViewController: BaseViewController {
     private var pickerView2 = UIPickerView()
     private var pickerView3 = UIPickerView()
 
+    private let viewModel = SimplePickerViewExampleViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
     }
     
     func bind() {
-        Observable.just([1, 2, 3])
+        viewModel.itemsPicker1
             .bind(to: pickerView1.rx.itemTitles) { _, item in
                 return "\(item)"
             }
             .disposed(by: disposeBag)
         
         pickerView1.rx.modelSelected(Int.self)
-            .subscribe(with: self) { _, models in
-                print("models selected 1: \(models)")
-            }
+            .map { $0.first ?? 0 }
+            .bind(to: viewModel.selectedRowPicker1)
             .disposed(by: disposeBag)
         
-        Observable.just([1, 2, 3])
+        viewModel.itemsPicker2
             .bind(to: pickerView2.rx.itemAttributedTitles) { _, item in
                 return NSAttributedString(string: "\(item)",
                                           attributes: [
@@ -45,13 +46,12 @@ final class SimplePickerViewExampleViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         pickerView2.rx.modelSelected(Int.self)
-            .subscribe(with: self) { _, models in
-                print("models selected 2: \(models)")
-            }
+            .map { $0.first ?? 0 }
+            .bind(to: viewModel.selectedRowPicker2)
             .disposed(by: disposeBag)
         
-        Observable.just([UIColor.red, UIColor.blue, UIColor.yellow])
-            .bind(to: pickerView3.rx.items) { _, element, _ in  //  (Int, Sequence.Element, UIView?)
+        viewModel.itemsPicker3
+            .bind(to: pickerView3.rx.items) { _, element, _ in
                 let view = UIView()
                 view.backgroundColor = element
                 return view
@@ -59,9 +59,8 @@ final class SimplePickerViewExampleViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         pickerView3.rx.modelSelected(UIColor.self)
-            .subscribe(with: self) { _, models in
-                print("models selected 3: \(models)")
-            }
+            .map { $0.first ?? .clear }
+            .bind(to: viewModel.selectedColorPicker3)
             .disposed(by: disposeBag)
     }
     
