@@ -10,6 +10,7 @@
 		4F07B81F2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F07B81E2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift */; };
 		4F07B8222BBE25D700E1DB2E /* SimplePickerViewExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F07B8212BBE25D700E1DB2E /* SimplePickerViewExampleViewModel.swift */; };
 		4F07B8252BBE26EA00E1DB2E /* NumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F07B8242BBE26EA00E1DB2E /* NumbersViewModel.swift */; };
+		4F07B8282BBE28BF00E1DB2E /* SimpleValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F07B8272BBE28BF00E1DB2E /* SimpleValidationViewModel.swift */; };
 		4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7842BB63F6400CB32A2 /* AppDelegate.swift */; };
 		4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7862BB63F6400CB32A2 /* SceneDelegate.swift */; };
 		4F4BA7892BB63F6400CB32A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BA7882BB63F6400CB32A2 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		4F07B81E2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewExampleViewModel.swift; sourceTree = "<group>"; };
 		4F07B8212BBE25D700E1DB2E /* SimplePickerViewExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewExampleViewModel.swift; sourceTree = "<group>"; };
 		4F07B8242BBE26EA00E1DB2E /* NumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewModel.swift; sourceTree = "<group>"; };
+		4F07B8272BBE28BF00E1DB2E /* SimpleValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewModel.swift; sourceTree = "<group>"; };
 		4F4BA7812BB63F6400CB32A2 /* RxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4BA7842BB63F6400CB32A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F4BA7862BB63F6400CB32A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,15 @@
 			path = Numbers;
 			sourceTree = "<group>";
 		};
+		4F07B8262BBE289200E1DB2E /* SimpleValidation */ = {
+			isa = PBXGroup;
+			children = (
+				4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */,
+				4F07B8272BBE28BF00E1DB2E /* SimpleValidationViewModel.swift */,
+			);
+			path = SimpleValidation;
+			sourceTree = "<group>";
+		};
 		4F4BA7782BB63F6400CB32A2 = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +138,10 @@
 		4F4BA7BA2BBB2A0900CB32A2 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				4F07B8262BBE289200E1DB2E /* SimpleValidation */,
 				4F07B8232BBE26C200E1DB2E /* Numbers */,
 				4F07B8202BBE258F00E1DB2E /* SimplePickerViewExample */,
 				4F07B81D2BBE170B00E1DB2E /* SimpleTableViewExample */,
-				4F4BA7BD2BBB331300CB32A2 /* SimpleValidationViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 				4F4BA7B52BBB1EC500CB32A2 /* SimplePickerViewExampleViewController.swift in Sources */,
 				4F07B8252BBE26EA00E1DB2E /* NumbersViewModel.swift in Sources */,
 				4F07B81F2BBE173600E1DB2E /* SimpleTableViewExampleViewModel.swift in Sources */,
+				4F07B8282BBE28BF00E1DB2E /* SimpleValidationViewModel.swift in Sources */,
 				4F4BA7852BB63F6400CB32A2 /* AppDelegate.swift in Sources */,
 				4F4BA7B92BBB260900CB32A2 /* MainTableViewController.swift in Sources */,
 				4F4BA7872BB63F6400CB32A2 /* SceneDelegate.swift in Sources */,

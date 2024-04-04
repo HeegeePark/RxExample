@@ -14,16 +14,17 @@ private let minimalUsernameLength = 5
 private let minimalPasswordLength = 5
 
 final class SimpleValidationViewController: BaseViewController {
-    
     private let username = UILabel()
     private let usernameOutlet = UITextField()
     private let usernameValidOutlet = UILabel()
-
+    
     private let password = UILabel()
     private let passwordOutlet = UITextField()
     private let passwordValidOutlet = UILabel()
-
+    
     private let doSomethingOutlet = UIButton()
+    
+    private let viewModel = SimpleValidationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,44 +32,30 @@ final class SimpleValidationViewController: BaseViewController {
     }
     
     private func bind() {
-        // share: subscribe() 할때마다 새로운 Observable 시퀀스가 생성되지 않고, 하나의 시퀀스에서 방출되는 아이템을 공유해 사용
-        // replay: 버퍼의 크기, 다른 시퀀스에서 share()된 Observable을 구독했을 때, 가장 최근 방출했던 아이템을 버퍼의 크기만큼 새로운 구독 시퀀스에 전달
-        // 여러 시퀀스에서 사용하게 되는 Observable은 subscribe() 할때마다 subscription이 생성되니 share()해서 사용해야 함
-        // 보통 share(replay: 1) 형태로 사용
-        // 참고: https://jusung.github.io/shareReplay/
-        
-        let usernameValid = usernameOutlet.rx.text.orEmpty
-            .map { $0.count >= minimalUsernameLength }
-            .share(replay: 1)
-        
-        let passwordValid = passwordOutlet.rx.text.orEmpty
-            .map { $0.count >= minimalPasswordLength }
-            .share(replay: 1)
-        
-        let everythingValid = Observable.combineLatest(usernameValid, passwordValid)
-        { $0 && $1 }
-            .share(replay: 1)
-        
-        usernameValid
-            .bind(to: passwordOutlet.rx.isEnabled)
+        usernameOutlet.rx.text.orEmpty
+            .bind(to: viewModel.usernameText)
             .disposed(by: disposeBag)
         
-        usernameValid
-            .bind(to: usernameValidOutlet.rx.isHidden)
+        passwordOutlet.rx.text.orEmpty
+            .bind(to: viewModel.passwordText)
             .disposed(by: disposeBag)
         
-        passwordValid
-            .bind(to: passwordValidOutlet.rx.isHidden)
+        viewModel.usernameValidationText
+            .drive(usernameValidOutlet.rx.text)
             .disposed(by: disposeBag)
         
-        everythingValid
-            .bind(to: doSomethingOutlet.rx.isEnabled)
+        viewModel.passwordValidationText
+            .drive(passwordValidOutlet.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.isEverythingValid
+            .drive(doSomethingOutlet.rx.isEnabled)
             .disposed(by: disposeBag)
         
         doSomethingOutlet.rx.tap
-            .bind(with: self) { owner, _ in
+            .bind(with: self, onNext: { owner, _ in
                 owner.showAlert(title: "RxExample", message: "This is wonderful", ok: "Ok", handler: {})
-            }
+            })
             .disposed(by: disposeBag)
     }
     
@@ -144,5 +131,4 @@ final class SimpleValidationViewController: BaseViewController {
         doSomethingOutlet.setTitleColor(.black, for: .normal)
         doSomethingOutlet.backgroundColor = .systemGreen
     }
-    
 }
